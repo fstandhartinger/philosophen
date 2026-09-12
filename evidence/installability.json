@@ -1,6 +1,6 @@
 {
-  "base": "http://localhost:3110",
-  "at": "2026-09-12T15:37:50.093Z",
+  "base": "https://philosophen.app.mintapis.com",
+  "at": "2026-09-12T15:40:35.370Z",
   "version": "62624fc59a48a13d",
   "installability": {
     "installabilityErrors": []
