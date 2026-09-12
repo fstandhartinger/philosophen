@@ -1,6 +1,6 @@
 # On-demand answer speech
 
-Implemented entirely on Sandy on 2026-09-12 for the existing application `u6fc5idncuehuouqihmhwo29` at https://philosophen.app.mintapis.com. Runtime source version: `1a7856ee09b5ff3a`. Deployment verification is recorded below after release.
+Implemented entirely on Sandy on 2026-09-12 for the existing application `u6fc5idncuehuouqihmhwo29` at https://philosophen.app.mintapis.com. Runtime source version: `747cd0002bf3b489`. Deployment verification is recorded below after release.
 
 ## Behavior
 

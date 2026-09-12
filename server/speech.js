@@ -21,7 +21,7 @@ export function installSpeech(app,options={}){
   if(!b||typeof b!=='object'||Array.isArray(b))return fail(400,'BAD_REQUEST');
   if(typeof b.version!=='string'||!b.version)return fail(400,'MISSING_VERSION');
   if(b.version!==version)return fail(409,'VERSION_MISMATCH');
-  if(!Object.hasOwn(SPEECH_VOICES,b.philosopher))return fail(400,'UNKNOWN_PHILOSOPHER');
+  if(typeof b.philosopher!=='string'||!Object.hasOwn(SPEECH_VOICES,b.philosopher))return fail(400,'UNKNOWN_PHILOSOPHER');
   if(typeof b.text!=='string'||!b.text.trim()||b.text.length>16000||/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/.test(b.text))return fail(400,'INVALID_TEXT');
   if(!env.ELEVENLABS_API_KEY)return fail(503,'SPEECH_UNAVAILABLE');
   const now=Date.now(),today=new Date(now).toISOString().slice(0,10);

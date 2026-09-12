@@ -1,0 +1,15 @@
+✔ all male/female voices server controlled, output headers and full text (58.19836ms)
+✔ input, version, unknown persona, content type and origin fail before provider (17.927556ms)
+✔ complete long outputs split without losing characters, no surrogate split (3.515862ms)
+✔ timeout aborts fetch and slot released for retry (24.843842ms)
+✔ provider status, empty/type/signature/oversized errors and retry (15.919033ms)
+✔ independent per-IP request, character and global character budgets (11.064486ms)
+✔ concurrent request rejects before charging; disconnect aborts provider (14.462912ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 290.840843
