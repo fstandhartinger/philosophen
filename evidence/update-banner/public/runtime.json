@@ -1,0 +1,13 @@
+{
+  "runtime": "0c0f7836d2b0c758",
+  "health": {
+    "ok": true,
+    "version": "0c0f7836d2b0c758"
+  },
+  "version": {
+    "version": "0c0f7836d2b0c758"
+  },
+  "deployedRevision": "925169351405f88165e56b690cd35c0ee99ac738",
+  "deployment": "ma19u04yxbgj3s3ofqirr56z",
+  "deploymentStatus": "finished"
+}

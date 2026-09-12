@@ -10,4 +10,4 @@ Validation: 48 unit tests passed; existing real two-build PWA upgrade regression
 
 Evidence: `evidence/update-banner/{before,local}/` contains screenshots and measured JSON. `evidence/pwa-upgrade-results.json` contains upgrade results. Supervisor logs: `/home/flori/task-logs/philosophen-banner/`.
 
-Production verification and deployed revision will be recorded after deployment.
+Production: same Sandy app `u6fc5idncuehuouqihmhwo29`, https://philosophen.app.mintapis.com. Deployment `ma19u04yxbgj3s3ofqirr56z` finished at 19:49:26 UTC; application `running:healthy`. Deployed source revision `925169351405f88165e56b690cd35c0ee99ac738`, pushed to origin/main. Browser runtime, public `/api/version` and `/healthz` all report `0c0f7836d2b0c758`. All 36 public banner states passed after deployment finished; production screenshots and runtime evidence are in `evidence/update-banner/public/`. Portrait screenshots were visually inspected. This final evidence-only commit does not change deployed application sources.
