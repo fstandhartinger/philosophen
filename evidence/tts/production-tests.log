@@ -1,0 +1,29 @@
+{
+  version: '747cd0002bf3b489',
+  calls: 2,
+  results: [
+    {
+      persona: 'sokrates',
+      gender: 'male',
+      version: '747cd0002bf3b489',
+      status: 200,
+      bytes: 229085,
+      duration: '14.288980',
+      readyMs: 3257,
+      request: [Object],
+      automaticPlayback: true
+    },
+    {
+      persona: 'arendt',
+      gender: 'female',
+      version: '747cd0002bf3b489',
+      status: 200,
+      bytes: 329395,
+      duration: '20.558367',
+      readyMs: 4313,
+      request: [Object],
+      automaticPlayback: true
+    }
+  ],
+  errors: []
+}

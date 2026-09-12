@@ -31,3 +31,18 @@ Live ElevenLabs documentation and account voice/model catalogs were fetched dire
 - OpenCode `chutes/moonshotai/Kimi-K3-TEE` was given a narrow backend/test task capped at 180 seconds. It used the window reading context without producing files; the coordinator took over at timeout. Log: `/home/flori/task-logs/philosophen-tts/kimi-backend.log`. Supervisor: `/home/flori/task-logs/philosophen-tts/run.log`.
 
 The exact title “Armins und seine Philosophen Kumpels.”, Ja/Nein installation invitation and three-day cooldown are unchanged. No models, persona prompts, art, gift media or Telegram sends were changed.
+
+## Finished production release
+
+Final deployed application revision: `449145a13f8ba0f826cc25b1e1d32bca7b95e4d9` (implementation `ac35dcf` plus strict philosopher-type validation; its targeted 7 backend tests also pass in `evidence/tts/speech-final-tests.log`). Deployment `ijchxyhendgekjxzbxpolzn5` finished at 2026-09-12 15:54:51 UTC. Sandy reports `running:healthy`. `evidence/tts/deployment.json` records the MCP result.
+
+Public HTTPS health, API and actual browser runtime agree on **`747cd0002bf3b489`**. After the deployment completed, `tests/speech-production.mjs` exercised real assistant responses, actual button taps, the real same-origin ElevenLabs endpoint, spinner and automatic WebAudio playback on mobile Chromium with gesture policy enabled:
+
+| Persona | HTTP | Audio bytes | ffprobe duration | Click-to-ready check |
+|---|---:|---:|---:|---:|
+| Sokrates / George | 200 | 229,085 | 14.289 s | 3.257 s |
+| Hannah Arendt / Sarah | 200 | 329,395 | 20.558 s | 4.313 s |
+
+Both pause/resume operations reused their recordings, for exactly two speech requests during this successful run. No browser errors, no horizontal overflow and no API entries in the service-worker Cache API. `evidence/tts/production-results.json` includes actual versioned text/persona payloads. Production loading/playing screenshots were visually inspected. MP3s and ffprobe outputs are `evidence/tts/production-{male,female}.mp3[.json]`; the fixture is captured from the very Blob that the UI decodes/plays, avoiding an empty body returned by Playwright's network response inspection. This test instrumentation adds no speech requests and changes no app behavior.
+
+The final documentation/evidence commit follows the deployed code commit; it changes only tests, report and evidence, not runtime source. No additional deploy is needed for those artifacts. Temporary test servers were stopped. No physical phone/autoplay guarantee is claimed.

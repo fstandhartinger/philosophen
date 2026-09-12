@@ -1,0 +1,44 @@
+{
+  "base": "https://philosophen.app.mintapis.com",
+  "health": {
+    "ok": true,
+    "version": "747cd0002bf3b489"
+  },
+  "version": "747cd0002bf3b489",
+  "calls": 2,
+  "results": [
+    {
+      "persona": "sokrates",
+      "gender": "male",
+      "version": "747cd0002bf3b489",
+      "status": 200,
+      "bytes": 229085,
+      "duration": "14.288980",
+      "readyMs": 3257,
+      "request": {
+        "version": "747cd0002bf3b489",
+        "philosopher": "sokrates",
+        "text": "Wie soll ich es wissen, da ich doch nur auf dem Marktplatz frage, statt zu behaupten? Doch sage mir, Mitbürger: Meinst du, ein gutes Leben reicht sich an Reichtum und Ehre, oder erst dort an, wo die Seele gerecht und wahrhaftig wird?"
+      },
+      "automaticPlayback": true
+    },
+    {
+      "persona": "arendt",
+      "gender": "female",
+      "version": "747cd0002bf3b489",
+      "status": 200,
+      "bytes": 329395,
+      "duration": "20.558367",
+      "readyMs": 4313,
+      "request": {
+        "version": "747cd0002bf3b489",
+        "philosopher": "arendt",
+        "text": "Ein gutes Leben entsteht, wo wir in der Vita activa handelnd unter Menschen treten – im öffentlichen Raum, mit Worten und Taten, die etwas Neues beginnen und uns in unserer Pluralität zeigen. Es verlangt den Mut, die Welt trotz allem zu lieben – amor mundi – und die Verantwortung für unser Urteilen nicht abzugeben."
+      },
+      "automaticPlayback": true
+    }
+  ],
+  "apiCached": [],
+  "errors": [],
+  "at": "2026-09-12T15:56:15.403Z"
+}
