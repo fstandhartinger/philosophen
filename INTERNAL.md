@@ -26,3 +26,25 @@ Einzelner Sandy-Host ohne Hochverfügbarkeitszusage. Gesprächsspeicher nur im B
 ## Gestaltung und Medien
 
 Kohärente generierte Porträts in public/portraits, Markenassets in public/icons. Modell-/Promptbelege in evidence/artwork*. Reproduzierbare Druck- und Videoquellen in scripts/gift* beziehungsweise deliverables. Telegram-Nachrichtenbelege werden von scripts/telegram.py ohne Schlüssel in evidence/telegram-deliveries.json geschrieben.
+
+## Produktionsressource (12.09.2026)
+
+- URL: https://philosophen.app.mintapis.com
+- Repository: https://github.com/fstandhartinger/philosophen
+- Coolify-App UUID: `u6fc5idncuehuouqihmhwo29` (nur diese Ressource ändern).
+- Erster erfolgreicher Deploy: `zcgfzdcjvap9zl5zu8wyypyp`, Quellrevision `f3d0e7d9595a741aba14255f5e1ba1df2150b9ee`, Inhaltsversion `3821e9f99cb399fa`.
+- Docker: Node 22 Alpine, nicht privilegierter node-Nutzer, Port 3000, 1 CPU, 512 MB RAM (128 MB Reservation), Healthcheck GET /healthz, kein automatisches Deployment bei Push.
+- Standardgrenzen: 4.000 Zeichen/Nachricht, 12.000 Zeichen/Kontext, 24 Nachrichten; 20 Chats/min/IP, 120/Tag/IP; 8 Transkriptionen/min/IP, 60/Tag/IP; global 1.000 Anbieteranfragen/Tag geteilt über Chat/Audio. Max. 8 Chats und 4 Audioanfragen gleichzeitig, überzählige Anfragen werden mit 503 abgewiesen. Max. 12 MB Audio, Aufnahme stoppt nach 60 Sekunden. 25 Sekunden pro Modellversuch, maximal 100 Sekunden gesamt, Groq 35 Sekunden.
+- Private Proxy-Hops werden vertraut; der letzte nicht vertrauenswürdige Hop bestimmt die IP. Server logs enthalten keine Gesprächsinhalte oder Schlüssel.
+
+## Verifikation reproduzieren
+
+`npm test` (41 deterministische Tests). Nach `npm run build` und Start des Servers: `BASE_URL=http://localhost:3000 node tests/browser.mjs` (37 Browserprüfungen). `node tests/pwa-upgrade.mjs` baut zwei Versionen und startet ausschließlich eigene Testprozesse auf Port 3107; anschließend mit `npm run build` die normale Inhaltsversion wiederherstellen. Kein paralleler lokaler Build während dieses Tests.
+
+`BASE_URL=https://philosophen.app.mintapis.com HEADED=1 xvfb-run -a node tests/installability.mjs` nutzt ein frisches normales Chromium-Profil; Inkognito erlaubt keine PWA-Installation. `node tests/production-audio.mjs` verwendet einen deutschen WAV-Testton als Browser-Mikrofonquelle und ruft tatsächlich Groq über Produktion auf. `python3 scripts/verify-production.py https://philosophen.app.mintapis.com evidence/test-de.mp3` ruft alle acht Personas und Groq live auf (Anbieterkosten).
+
+## Medien reproduzieren
+
+- Porträts: Prompts in `deliverables/art-portraits/prompts.jsonl`, erzeugt mit dem imagegen-Skill-CLI, dessen Modellstandard `gpt-image-2` explizit geprüft wurde. `scripts/art-convert-webp.py` optimiert vorhandene Originale auf 640px, `scripts/art-brand.py` erzeugt das Phi-Logo/Icons und lädt lokale OFL-Schriften.
+- Karten: `python3 -m venv scripts/.venv-media`, dort `pip install reportlab qrcode pillow pymupdf opencv-python-headless`, dann `scripts/.venv-media/bin/python scripts/gift_cards.py`. Druck in Originalgröße 100 %, ohne Randlos-Vergrößerung; A6 148 × 105 mm. Die PNGs sind 1748 × 1240 Pixel mit 300-dpi-Metadaten. Alle QR-Codes werden dekodiert geprüft.
+- Film: Narration `deliverables/narration.txt`, George `JBFqnCBsd6RMkjVDRZzb`, `eleven_multilingual_v2`. Animation `scripts/gift-explainer/anim.html` mit deterministischem `seekTo(t)`. Beim Skill-Buildskript `NODE_PATH=/home/flori/Dev/chutes/philosophen/node_modules` setzen. Die Animation nutzt auf die 53,812 Sekunden Tonspur abgestimmte Zeitmarken.

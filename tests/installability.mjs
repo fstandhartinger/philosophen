@@ -1,0 +1,12 @@
+import {chromium} from 'playwright';
+import fs from 'node:fs';
+const base=process.env.BASE_URL||'http://localhost:3108';
+const c=await chromium.launchPersistentContext(fs.mkdtempSync('/tmp/philosophen-install-'),{headless:!process.env.HEADED,viewport:{width:1440,height:1000},serviceWorkers:'allow'});const b=c.browser();
+await c.addInitScript(()=>{window.installEvents=[];window.addEventListener('beforeinstallprompt',e=>window.installEvents.push({trusted:e.isTrusted,platforms:e.platforms}));});
+const p=await c.newPage();await p.goto(base);await p.getByTestId('persona-card').first().click();await p.waitForTimeout(process.env.HEADED?35000:4000);
+const cdp=await c.newCDPSession(p);await cdp.send('Page.enable');
+const installability=await cdp.send('Page.getInstallabilityErrors');const manifest=await cdp.send('Page.getAppManifest');const events=await p.evaluate(()=>window.installEvents);const actualVersion=await p.evaluate(()=>window.__APP_VERSION__);
+const ios=await b.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,userAgent:'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1'});
+await ios.addInitScript(()=>window.addEventListener('beforeinstallprompt',e=>e.stopImmediatePropagation(),true));
+const ip=await ios.newPage();await ip.goto(base);await ip.getByRole('button',{name:/App installieren/}).click();const iosText=await ip.locator('dialog').innerText();await ip.screenshot({path:'evidence/ios-install.png'});
+const result={base,at:new Date().toISOString(),version:actualVersion,installability,manifestErrors:manifest.errors,realBeforeInstallPromptEvents:events,iosInstructionsCorrect:/Teilen/.test(iosText)&&/Zum Home-Bildschirm/.test(iosText)&&/keinen automatischen/.test(iosText)};fs.writeFileSync('evidence/installability.json',JSON.stringify(result,null,2));console.log(result);await b.close();if(installability.installabilityErrors.length||manifest.errors.length||!result.iosInstructionsCorrect)process.exit(1);

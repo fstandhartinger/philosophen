@@ -1,8 +1,8 @@
 {
-  "baseUrl": "http://localhost:3108",
-  "at": "2026-09-12T15:00:31.537Z",
-  "passed": 31,
-  "failed": 6,
+  "baseUrl": "https://philosophen.app.mintapis.com",
+  "at": "2026-09-12T15:05:50.977Z",
+  "passed": 37,
+  "failed": 0,
   "results": [
     {
       "name": "landing shows 8 philosopher cards",
@@ -42,7 +42,7 @@
     {
       "name": "editable draft survives reload",
       "ok": true,
-      "detail": "got \"Entwurf-1789225205336-Was ist Tugend?\""
+      "detail": "got \"Entwurf-1789225538440-Was ist Tugend?\""
     },
     {
       "name": "markdown script injection NOT executed",
@@ -56,8 +56,8 @@
     },
     {
       "name": "markdown bold rendered (sanitization keeps formatting)",
-      "ok": false,
-      "detail": "strong count 0"
+      "ok": true,
+      "detail": "strong count 1"
     },
     {
       "name": "mic button present",
@@ -71,23 +71,23 @@
     },
     {
       "name": "transcript editable in input field",
-      "ok": false,
-      "detail": "input=\"\""
+      "ok": true,
+      "detail": "input=\"Transkript-Probe Was ist das Gute?\""
     },
     {
       "name": "transcript NOT auto-sent",
-      "ok": false,
+      "ok": true,
       "detail": ""
     },
     {
       "name": "mic denied → informative message",
-      "ok": false,
-      "detail": "no message found"
+      "ok": true,
+      "detail": "Mikrofonzugriff wurde nicht erlaubt. Du kannst ihn in den Browser-Einstellungen freigeben oder deine Frage tippen.\n×"
     },
     {
       "name": "mic unsupported → informative message",
-      "ok": false,
-      "detail": "no message found"
+      "ok": true,
+      "detail": "Dein Browser unterstützt hier keine Mikrofonaufnahme. Bitte tippe deine Frage ein.\n×"
     },
     {
       "name": "back returns to card grid",
@@ -142,7 +142,7 @@
     {
       "name": "service worker registration state",
       "ok": true,
-      "detail": "{\"supported\":true,\"registered\":true,\"scope\":\"http://localhost:3108/\",\"active\":true}"
+      "detail": "{\"supported\":true,\"registered\":true,\"scope\":\"https://philosophen.app.mintapis.com/\",\"active\":true}"
     },
     {
       "name": "/api/version no-store header",
@@ -161,8 +161,8 @@
     },
     {
       "name": "no console errors",
-      "ok": false,
-      "detail": "Failed to load resource: the server responded with a status of 409 (Conflict)"
+      "ok": true,
+      "detail": ""
     },
     {
       "name": "no page errors",

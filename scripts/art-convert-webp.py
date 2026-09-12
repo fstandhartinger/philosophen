@@ -15,7 +15,7 @@ PHILOSOPHERS = [
     "sokrates", "aristoteles", "epikur", "kant",
     "nietzsche", "arendt", "beauvoir", "camus",
 ]
-WEBP_QUALITY = 84
+WEBP_QUALITY = 86
 WEBP_METHOD = 6
 
 
@@ -27,10 +27,11 @@ def main() -> None:
         if not src.exists():
             raise SystemExit(f"missing source portrait: {src}")
         img = Image.open(src).convert("RGB")
+        img.thumbnail((640, 640))
         out = DST / f"{name}.webp"
         img.save(out, "WEBP", quality=WEBP_QUALITY, method=WEBP_METHOD)
         verify = Image.open(out)
-        assert verify.size == (1024, 1024), f"unexpected size: {out} {verify.size}"
+        assert verify.size == (640, 640), f"unexpected size: {out} {verify.size}"
         print(f"{out.relative_to(ROOT)}  {verify.size}  {out.stat().st_size // 1024} KB")
         thumbs.append(img.resize((256, 256), Image.LANCZOS))
 

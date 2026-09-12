@@ -1,0 +1,114 @@
+{
+  "at": "2026-09-12T15:05:05.927033+00:00",
+  "base": "https://philosophen.app.mintapis.com",
+  "checks": [
+    {
+      "path": "/healthz",
+      "status": 200,
+      "cacheControl": "no-store",
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "/api/version",
+      "status": 200,
+      "cacheControl": "no-store",
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "/api/personas",
+      "status": 200,
+      "cacheControl": "no-store",
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "/manifest.webmanifest",
+      "status": 200,
+      "cacheControl": "no-store, no-cache, must-revalidate",
+      "contentType": "application/manifest+json; charset=utf-8"
+    },
+    {
+      "path": "/sw.js",
+      "status": 200,
+      "cacheControl": "no-store, no-cache, must-revalidate",
+      "contentType": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "cacheControl": "no-store, no-cache, must-revalidate",
+      "contentType": "text/html; charset=utf-8"
+    }
+  ],
+  "version": "3821e9f99cb399fa",
+  "conversations": [
+    {
+      "id": "sokrates",
+      "status": 200,
+      "seconds": 7.48,
+      "model": "moonshotai/Kimi-K3-TEE",
+      "reply": "Zum Fest deines Geburtstages, mein Freund, sage ich nicht, was ein gutes Leben ist, sondern frage, ob es nicht darin besteht, daß die Seele sich selbst prüft und das Gute mehr liebt als den bloßen Schein des Guten. Auf dem Marktplatz von Athen sah ich viele, die reich und geehrt waren und doch arm in ihrem Innern lebten. Vielleicht also ist ein gutes Leben eines, in dem du täglich etwas wahrer wirst als gestern. Und nun sage mir: Meinst du, ein Leben ohne Selbstprüfung könnte wirklich gut genannt werden?",
+      "error": null
+    },
+    {
+      "id": "aristoteles",
+      "status": 200,
+      "seconds": 9.54,
+      "model": "moonshotai/Kimi-K3-TEE",
+      "reply": "Zunächst wünsche ich dir, daß dieser Tag nicht nur ein Datum sei, sondern ein Anlaß zur Betrachtung deiner Entelechie – ob nämlich deine Anlagen sich zur wirkenden Tugend entfaltet haben. Ein gutes Leben, die *Eudaimonia*, besteht weder im bloßen Genuß noch im äußeren Besitz, sondern in der beständigen Tätigkeit der Seele gemäß der rechten Mitte, wobei die Klugheit (*Phronesis*) in jedem Einzelfall das Maß findet. Es ist das gelingende Ganze, in dem die drei Freundschaften – besonders jene der Tugend – dich tragen und die Theorie als höchste Vollendung aufleuchtet. Welche Tugend – ob Tapferkeit, Freigebigkeit oder Weisheit – strebst du in diesem neuen Lebensjahr vornehmlich zu vervollkommnen?",
+      "error": null
+    },
+    {
+      "id": "epikur",
+      "status": 200,
+      "seconds": 5.51,
+      "model": "moonshotai/Kimi-K3-TEE",
+      "reply": "Ein gutes Leben ist ein ruhiger Garten: der Leib ohne Schmerz, die Seele ohne Sturm, und dazwischen Freunde, mit denen man Brot und Wasser so fröhlich teilt wie andere ein Festmahl. Nicht das laute Gewinnen, sondern das stille Genügen trägt uns durch die Jahre. Zum Geburtstag wünsche ich dir weniger das Mehr als das Genug.\n\nWelche Begierde darf heute still werden, damit dein Herz leichter feiert?",
+      "error": null
+    },
+    {
+      "id": "kant",
+      "status": 200,
+      "seconds": 10.07,
+      "model": "moonshotai/Kimi-K3-TEE",
+      "reply": "Ein gutes Leben ist nicht das der angenehmsten Neigungen, sondern das eines Willens, der durch Pflicht und Achtung vor dem moralischen Gesetz würdig wird, glücklich zu sein, und dabei jeden Menschen jederzeit zugleich als Zweck an sich, niemals bloß als Mittel behandelt. Zum Geburtstage wünsche ich Ihnen daher weniger eine Summe von Vergnügungen als die Stärke der Autonomie: dass Sie Ihre Maximen vor dem Richterstuhl der allgemeinen Gesetzgebung bestehen lassen und so an Ihrer eigenen Würde unerschütterlich festhalten. Denn Glückseligkeit ohne guten Willen ist ein bloßer Zufall der Natur, während der gute Wille allein in sich selbst den unbedingten Wert trägt. Welche Maxime Ihres Wollens, werter Geburtstagskind, soll im kommenden Jahre Ihr Handeln leiten, und könnten Sie wollen, dass sie ein allgemeines Gesetz werde?",
+      "error": null
+    },
+    {
+      "id": "nietzsche",
+      "status": 200,
+      "seconds": 5.42,
+      "model": "moonshotai/Kimi-K3-TEE",
+      "reply": "Ein gutes Leben ist kein gepolstertes Glück der letzten Menschen, sondern ein Ja zu allem, was war und kommt — Schmerz eingerechnet, amor fati! Es ist die Kunst, sein Schicksal so zu lieben, dass man es noch einmal wollte, unzählige Male. Würdest du diesen Geburtstag, genau so wie er ist, ewig wiederleben wollen?",
+      "error": null
+    },
+    {
+      "id": "arendt",
+      "status": 200,
+      "seconds": 7.54,
+      "model": "moonshotai/Kimi-K3-TEE",
+      "reply": "Ein gutes Leben besteht nicht im bloßen Arbeiten, das dem Kreislauf der Natur dient, sondern im *Handeln*: darin, im öffentlichen Raum unter Menschen zu erscheinen und mit der eigenen Stimme einen Anfang zu setzen. Es bedeutet, die Natalität – die Fähigkeit, Neues in die Welt zu bringen – zu wagen und die Welt trotz ihrer Fragilität im *amor mundi* zu bejahen. Was für ein Anfang wollen Sie heute, an Ihrem Geburtstag, in der Welt sein?",
+      "error": null
+    },
+    {
+      "id": "beauvoir",
+      "status": 200,
+      "seconds": 8.13,
+      "model": "moonshotai/Kimi-K3-TEE",
+      "reply": "Ein Geburtstag ist eine ernste Einladung, nicht nur Jahre zu zählen, sondern die eigene Freiheit auf den Prüfstand zu stellen. Aus meiner Sicht ist ein gutes Leben jenes, in dem man die eigene Situation als Ausgangspunkt für ein Projekt wählt, statt sich in der Immanenz als das Andere einrichten zu lassen, und wo die eigene Freiheit nur durch das Wollen der Freiheit aller anderen Bestand hat. Wo aber findest du dich heute – am Ende deines neuen Lebensjahres – in der Gefahr, dich selbst zur bloßen Sache zu machen, und welche konkrete Überschreitung deiner gegenwärtigen Grenzen wagst du noch nicht zu denken?",
+      "error": null
+    },
+    {
+      "id": "camus",
+      "status": 200,
+      "seconds": 5.02,
+      "model": "moonshotai/Kimi-K3-TEE",
+      "reply": "Ein gutes Leben ist das volle Ja zur Sonne auf der Haut und zur Begegnung mit dem anderen, ohne die Lüge eines Trosts, der uns betrügt. Es bleibt die Revolte, die den Felsen hinaufwälzt, trotz des Schweigens der Welt, denn die Freude ist unsere einzige Wahrheit. Was bereitet Ihnen heute, an Ihrem Geburtstag, eine sinnliche Freude?",
+      "error": null
+    }
+  ],
+  "transcription": {
+    "status": 200,
+    "text": " Hallo Sokrates! Was bedeutet es, ein gutes Leben zu führen? Ich möchte an meinem Geburtstag darüber nachdenken.",
+    "version": "3821e9f99cb399fa"
+  }
+}

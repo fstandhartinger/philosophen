@@ -5,5 +5,110 @@
     "file": null,
     "text": "[Philosophen] Du musst nichts tun.\n- Armins Geburtstags-App entsteht gerade auf Sandy.\n- Alle vier gewünschten Modellstufen haben echte deutsche Antworten geliefert.\n- Porträts, drei druckbare Karten und das deutsche Erklärvideo werden parallel erstellt.\n👂 Ich lausche bis etwa 16:36 UTC — antworte hier per Text oder Voice.",
     "message_id": 13574
+  },
+  {
+    "time": "2026-09-12T15:07:13.962183+00:00",
+    "method": "sendMessage",
+    "file": null,
+    "text": "[Philosophen] Fertig nutzbar — du musst nichts einrichten.\n- Armins Geschenk: https://philosophen.app.mintapis.com\n- Alle acht Philosophen und die deutsche Spracheingabe sind live geprüft.\n- Screenshots, QR-Code, drei A6-Druckkarten und das George-Erklärvideo folgen jetzt in voller Qualität.\n👂 Ich lausche bis etwa 16:36 UTC — antworte hier per Text oder Voice.",
+    "message_id": 13575
+  },
+  {
+    "time": "2026-09-12T15:07:14.700281+00:00",
+    "method": "sendPhoto",
+    "file": "evidence/production-desktop.png",
+    "text": "Armins philosophischer Salon — die acht Perspektiven auf dem Desktop.",
+    "message_id": 13576
+  },
+  {
+    "time": "2026-09-12T15:07:15.167559+00:00",
+    "method": "sendPhoto",
+    "file": "evidence/production-mobile-chat.png",
+    "text": "Mobilansicht: Frage tippen oder einsprechen; Transkript vor dem Senden bearbeiten.",
+    "message_id": 13577
+  },
+  {
+    "time": "2026-09-12T15:07:15.513672+00:00",
+    "method": "sendDocument",
+    "file": "deliverables/gift-qr.png",
+    "text": "QR-Code in Originalqualität: https://philosophen.app.mintapis.com",
+    "message_id": 13578
+  },
+  {
+    "time": "2026-09-12T15:07:34.503282+00:00",
+    "method": "sendDocument",
+    "file": "deliverables/gift-card-1-klassische-kolonnade.png",
+    "text": "Alles Gute zum Geburtstag, Armin! A6-Postkarte · 300 dpi · Originaldatei zum Drucken.",
+    "message_id": 13579
+  },
+  {
+    "time": "2026-09-12T15:07:34.973266+00:00",
+    "method": "sendDocument",
+    "file": "deliverables/gift-card-2-modernistische-geometrie.png",
+    "text": "Alles Gute zum Geburtstag, Armin! A6-Postkarte · 300 dpi · Originaldatei zum Drucken.",
+    "message_id": 13580
+  },
+  {
+    "time": "2026-09-12T15:07:35.645893+00:00",
+    "method": "sendDocument",
+    "file": "deliverables/gift-card-3-sternennacht-wald.png",
+    "text": "Alles Gute zum Geburtstag, Armin! A6-Postkarte · 300 dpi · Originaldatei zum Drucken.",
+    "message_id": 13581
+  },
+  {
+    "time": "2026-09-12T15:07:35.969727+00:00",
+    "method": "sendDocument",
+    "file": "deliverables/gift-card-1-klassische-kolonnade.pdf",
+    "text": "A6-Druck-PDF (148 × 105 mm). Bitte in tatsächlicher Größe / 100 % drucken.",
+    "message_id": 13582
+  },
+  {
+    "time": "2026-09-12T15:07:36.281974+00:00",
+    "method": "sendDocument",
+    "file": "deliverables/gift-card-2-modernistische-geometrie.pdf",
+    "text": "A6-Druck-PDF (148 × 105 mm). Bitte in tatsächlicher Größe / 100 % drucken.",
+    "message_id": 13583
+  },
+  {
+    "time": "2026-09-12T15:07:36.613948+00:00",
+    "method": "sendDocument",
+    "file": "deliverables/gift-card-3-sternennacht-wald.pdf",
+    "text": "A6-Druck-PDF (148 × 105 mm). Bitte in tatsächlicher Größe / 100 % drucken.",
+    "message_id": 13584
+  },
+  {
+    "time": "2026-09-12T15:07:36.909428+00:00",
+    "method": "sendDocument",
+    "file": "deliverables/gift-cards-3seiten.pdf",
+    "text": "Alle drei Geburtstagskarten als gemeinsame Druckdatei · 3 Seiten · A6 · 100 % drucken.",
+    "message_id": 13585
+  },
+  {
+    "time": "2026-09-12T15:07:37.751722+00:00",
+    "method": "sendVideo",
+    "file": "deliverables/german-explainer.mp4",
+    "text": "Für Armin: Was würde der Philosoph sagen? 54 Sekunden · deutsche George-Narration · https://philosophen.app.mintapis.com",
+    "message_id": 13586
+  },
+  {
+    "time": "2026-09-12T15:10:50.598565+00:00",
+    "method": "sendPhoto",
+    "file": "evidence/production-audio-transcript.png",
+    "text": "Auch komplett durchgeprüft: Browseraufnahme → echte Groq-Transkription → editierbarer Text. Es wird nichts automatisch als Chatfrage gesendet.",
+    "message_id": 13587
+  },
+  {
+    "time": "2026-09-12T15:10:51.084707+00:00",
+    "method": "sendPhoto",
+    "file": "evidence/production-real-chat.png",
+    "text": "Ein echtes Produktionsgespräch mit Sokrates — keine Demo-Antwort.",
+    "message_id": 13588
+  },
+  {
+    "time": "2026-09-12T15:12:12.636158+00:00",
+    "method": "sendDocument",
+    "file": "FINAL_REPORT.md",
+    "text": "Abschlussbericht: öffentlicher Link, getestete Revision, alle Testnachweise, Dateipfade und Telegram-Lieferbelege.",
+    "message_id": 13589
   }
 ]

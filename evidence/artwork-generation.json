@@ -10,35 +10,43 @@
   "outputs": [
     {
       "file": "public/portraits/arendt.webp",
-      "sha256": "dba9c5d2c0b2b2e089f98c6ef9b242c5640cd8f6508bf7f8ff17e7aa8d15ac6c"
+      "sha256": "f755222e47f7d1e306c806a75760ea851fb4199c842672e537307218fe328483",
+      "displayResolution": "640x640"
     },
     {
       "file": "public/portraits/aristoteles.webp",
-      "sha256": "c3cffaaa131dad80066bc8bb4d8e291fb21adbc4e1578a53df72eef7d85379ac"
+      "sha256": "d0bdc13d675e7bca08f6e6c6b6cc917ebacd7a2aa97b72ed1f52226602473712",
+      "displayResolution": "640x640"
     },
     {
       "file": "public/portraits/beauvoir.webp",
-      "sha256": "af44743f96a67a9b02a2d85f6b2b73f1e72c3e7b66e17c5a9624ac564b86fe79"
+      "sha256": "3021b322ab622c487b94bf59e031e064d70bfaa721f0f937b7759e9fbad1a82f",
+      "displayResolution": "640x640"
     },
     {
       "file": "public/portraits/camus.webp",
-      "sha256": "fa89e707a8016a2e4ef43b637f2a7c092916ec724f2f73c02b8f30f90c641fb4"
+      "sha256": "e731d29e054e8dbb2f2a2fe353e5fabf4378b488da28ee1a3b60b7a69fc8bd74",
+      "displayResolution": "640x640"
     },
     {
       "file": "public/portraits/epikur.webp",
-      "sha256": "f939830e8aee3fb1e54cf80103e0b1c7ac0f40de1cc122a703e07c1662803b01"
+      "sha256": "a0bc4e72b010aad98a86a1c31bdb9d71eb4b77ab03254ae65669e371f246c8e6",
+      "displayResolution": "640x640"
     },
     {
       "file": "public/portraits/kant.webp",
-      "sha256": "bca48e3337304e394381676e972f9e7b62c63f07faf5e45b066290297cbc1721"
+      "sha256": "351d6bb87ac299336328a4293c6bbb4e2363f4af4b95a78661386dc18f2f6892",
+      "displayResolution": "640x640"
     },
     {
       "file": "public/portraits/nietzsche.webp",
-      "sha256": "5469f6a3e6e8ac1f7cd9ba03ee69125957b7d33dfbb851d338e9968f4bcb8066"
+      "sha256": "1541879925d3b6ac4d8a28568dcd1e735e2c893fb5ca17d18e3a735aa3e74fbb",
+      "displayResolution": "640x640"
     },
     {
       "file": "public/portraits/sokrates.webp",
-      "sha256": "3656b039b53ea5944d0dadd463031cc6c01f7815b8c4cc48ccad0543eb639539"
+      "sha256": "719b2e2fb8c27c8c1eb749699fa881defa6e852f223ad835ff12f1e93991e372",
+      "displayResolution": "640x640"
     }
   ],
   "brand": "Coordinator code-native phi symbol; icons regenerated via scripts/art-brand.py",

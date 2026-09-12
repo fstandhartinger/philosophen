@@ -1,0 +1,18 @@
+{
+  "base": "https://philosophen.app.mintapis.com",
+  "at": "2026-09-12T15:07:29.081Z",
+  "version": "3821e9f99cb399fa",
+  "installability": {
+    "installabilityErrors": []
+  },
+  "manifestErrors": [],
+  "realBeforeInstallPromptEvents": [
+    {
+      "trusted": true,
+      "platforms": [
+        "web"
+      ]
+    }
+  ],
+  "iosInstructionsCorrect": true
+}

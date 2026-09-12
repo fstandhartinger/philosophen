@@ -1,0 +1,11 @@
+{
+  "at": "2026-09-12T15:08:48.386Z",
+  "base": "https://philosophen.app.mintapis.com/",
+  "recordingSource": "German George audio supplied to Chromium fake microphone; real MediaRecorder encoding and real production Groq request; no API mocks",
+  "status": 200,
+  "text": "Hallo Sokrates! Was bedeutet es, ein gutes Leben zu führen? Ich möchte an meinem Geburtstag darüber nachdenken. Hallo Sokrates!",
+  "draftBefore": "",
+  "editableTransfer": true,
+  "autoSent": false,
+  "version": "3821e9f99cb399fa"
+}

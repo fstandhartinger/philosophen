@@ -1,0 +1,17 @@
+{
+  "application": "philosophen",
+  "url": "https://philosophen.app.mintapis.com",
+  "repository": "https://github.com/fstandhartinger/philosophen",
+  "applicationUuid": "u6fc5idncuehuouqihmhwo29",
+  "deploymentUuid": "zcgfzdcjvap9zl5zu8wyypyp",
+  "deployedRevision": "f3d0e7d9595a741aba14255f5e1ba1df2150b9ee",
+  "contentVersion": "3821e9f99cb399fa",
+  "state": "finished; running:healthy",
+  "resources": {
+    "cpu": 1,
+    "memoryMB": 512,
+    "port": 3000,
+    "health": "/healthz"
+  },
+  "deploymentFinishedAt": "2026-09-12T15:04:44Z"
+}
