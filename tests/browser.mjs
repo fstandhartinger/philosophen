@@ -145,10 +145,7 @@ async function main() {
   }
   check('all portraits served', true);
 
-  // --- AI disclaimer visible (landing or footer)
-  const disclaimer = await visible(page, SEL.disclaimer, 4000);
-  check('AI disclaimer rendered', !!disclaimer,
-    disclaimer ? await disclaimer.innerText().catch(() => '') : 'not found');
+  check('AI disclaimer absent', !bodyText.includes('Imaginative KI-Simulationen'));
 
   // --- No horizontal overflow (desktop)
   const overflowD = await page.evaluate(() =>
@@ -430,6 +427,7 @@ async function main() {
   check('mobile renders cards', mCards >= 8, `cards=${mCards}`);
   await mp.screenshot({ path: resolve(EVID, 'mobile.png'), fullPage: true });
   check('evidence/mobile.png written', true);
+  const invite=mp.getByRole('button',{name:'Nein',exact:true});if(await invite.isVisible())await invite.click();
   // Chat flow on mobile (quick)
   for (const name of ['Sokrates', 'sokrates']) {
     try { const c = mp.locator(`text=${name}`).first(); if (await c.count()) { await c.click({ timeout: 2500 }); break; } } catch {}

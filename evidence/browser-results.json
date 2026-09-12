@@ -1,6 +1,6 @@
 {
-  "baseUrl": "https://philosophen.app.mintapis.com",
-  "at": "2026-09-12T15:05:50.977Z",
+  "baseUrl": "http://localhost:3110",
+  "at": "2026-09-12T15:35:48.326Z",
   "passed": 37,
   "failed": 0,
   "results": [
@@ -20,9 +20,9 @@
       "detail": ""
     },
     {
-      "name": "AI disclaimer rendered",
+      "name": "AI disclaimer absent",
       "ok": true,
-      "detail": "Imaginative KI-Simulationen, keine historischen Originalstimmen oder verlässlichen Zitate."
+      "detail": ""
     },
     {
       "name": "no horizontal overflow (desktop 1440)",
@@ -42,7 +42,7 @@
     {
       "name": "editable draft survives reload",
       "ok": true,
-      "detail": "got \"Entwurf-1789225538440-Was ist Tugend?\""
+      "detail": "got \"Entwurf-1789227335956-Was ist Tugend?\""
     },
     {
       "name": "markdown script injection NOT executed",
@@ -142,7 +142,7 @@
     {
       "name": "service worker registration state",
       "ok": true,
-      "detail": "{\"supported\":true,\"registered\":true,\"scope\":\"https://philosophen.app.mintapis.com/\",\"active\":true}"
+      "detail": "{\"supported\":true,\"registered\":true,\"scope\":\"http://localhost:3110/\",\"active\":true}"
     },
     {
       "name": "/api/version no-store header",

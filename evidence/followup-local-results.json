@@ -1,0 +1,16 @@
+{
+  "base": "http://localhost:3110",
+  "results": [
+    "iOS automatic invitation, exact answers, 360/390 layout, Nein survives reload",
+    "before expiry absent; after expiry on reload present",
+    "foreground expiration and Escape cooldown; manual bypass and iOS instructions",
+    "Ja iOS fallback and Android fallback",
+    "late saved native event consumed by Ja; cancellation cooldown; appinstalled suppression",
+    "standalone and desktop never automatically invited",
+    "other modal, chat and recording defer expiration; removed UI text absent",
+    "backdrop dismissal persists cooldown",
+    "storage denied does not crash or repeat in same page"
+  ],
+  "passed": 9,
+  "at": "2026-09-12T15:37:42.557Z"
+}

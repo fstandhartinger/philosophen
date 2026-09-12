@@ -801,3 +801,13 @@ button {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+/* Gift branding wraps within narrow smartphone headers. */
+.topbar-inner .brand{min-width:0;flex:1;text-align:left}
+.topbar-inner .brand-icon{flex-shrink:0}
+.topbar-inner .brand-mark{line-height:1.1;overflow-wrap:anywhere}
+.topbar-inner .header-actions{flex-shrink:0;max-width:7rem}
+.topbar-inner .install-link{min-height:44px}
+.install-answers .btn{min-width:72px;min-height:44px;text-transform:none;font-size:1rem;letter-spacing:normal}
+.composer-meta{justify-content:flex-end}
+@media(max-width:640px){.topbar-inner .brand-mark{font-size:1.08rem}.topbar-inner{gap:.65rem}.topbar-inner .brand{gap:7px}}
