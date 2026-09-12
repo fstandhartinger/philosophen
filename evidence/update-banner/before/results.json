@@ -1,0 +1,258 @@
+{
+  "base": "https://philosophen.app.mintapis.com",
+  "at": "2026-09-12T19:45:34.422Z",
+  "results": [
+    {
+      "width": 320,
+      "height": 740,
+      "zoom": 1,
+      "state": "idle",
+      "x": -112,
+      "right": 176,
+      "y": 0,
+      "bottom": 125.96875,
+      "center": 32,
+      "button": {
+        "x": -98,
+        "right": 65.0625,
+        "y": 82.609375,
+        "bottom": 115.96875
+      },
+      "overflow": false,
+      "pageOverflow": false,
+      "transform": "matrix(1, 0, 0, 1, -144, 0)",
+      "position": "sticky"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "zoom": 2,
+      "state": "idle",
+      "x": -64,
+      "right": 192,
+      "y": 0,
+      "bottom": 334.6875,
+      "center": 64,
+      "button": {
+        "x": -50,
+        "right": 261.109375,
+        "y": 273.96875,
+        "bottom": 324.6875
+      },
+      "overflow": true,
+      "pageOverflow": true,
+      "transform": "matrix(1, 0, 0, 1, -128, 0)",
+      "position": "sticky"
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "zoom": 1,
+      "state": "idle",
+      "x": -132,
+      "right": 196,
+      "y": 0,
+      "bottom": 125.96875,
+      "center": 32,
+      "button": {
+        "x": -118,
+        "right": 45.0625,
+        "y": 82.609375,
+        "bottom": 115.96875
+      },
+      "overflow": false,
+      "pageOverflow": false,
+      "transform": "matrix(1, 0, 0, 1, -164, 0)",
+      "position": "sticky"
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "zoom": 2,
+      "state": "idle",
+      "x": -84,
+      "right": 212,
+      "y": 0,
+      "bottom": 294.375,
+      "center": 64,
+      "button": {
+        "x": -70,
+        "right": 241.109375,
+        "y": 233.65625,
+        "bottom": 284.375
+      },
+      "overflow": true,
+      "pageOverflow": true,
+      "transform": "matrix(1, 0, 0, 1, -148, 0)",
+      "position": "sticky"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "zoom": 1,
+      "state": "idle",
+      "x": -147,
+      "right": 211,
+      "y": 0,
+      "bottom": 106.9375,
+      "center": 32,
+      "button": {
+        "x": -133,
+        "right": 30.0625,
+        "y": 63.578125,
+        "bottom": 96.9375
+      },
+      "overflow": false,
+      "pageOverflow": false,
+      "transform": "matrix(1, 0, 0, 1, -179, 0)",
+      "position": "sticky"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "zoom": 2,
+      "state": "idle",
+      "x": -99,
+      "right": 227,
+      "y": 0,
+      "bottom": 294.375,
+      "center": 64,
+      "button": {
+        "x": -85,
+        "right": 226.109375,
+        "y": 233.65625,
+        "bottom": 284.375
+      },
+      "overflow": false,
+      "pageOverflow": true,
+      "transform": "matrix(1, 0, 0, 1, -163, 0)",
+      "position": "sticky"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "zoom": 1,
+      "state": "idle",
+      "x": -167,
+      "right": 231,
+      "y": 0,
+      "bottom": 106.9375,
+      "center": 32,
+      "button": {
+        "x": -153,
+        "right": 10.0625,
+        "y": 63.578125,
+        "bottom": 96.9375
+      },
+      "overflow": false,
+      "pageOverflow": false,
+      "transform": "matrix(1, 0, 0, 1, -199, 0)",
+      "position": "sticky"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "zoom": 2,
+      "state": "idle",
+      "x": -119,
+      "right": 247,
+      "y": 0,
+      "bottom": 294.375,
+      "center": 64,
+      "button": {
+        "x": -105,
+        "right": 206.109375,
+        "y": 233.65625,
+        "bottom": 284.375
+      },
+      "overflow": false,
+      "pageOverflow": true,
+      "transform": "matrix(1, 0, 0, 1, -183, 0)",
+      "position": "sticky"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "zoom": 1,
+      "state": "idle",
+      "x": 124,
+      "right": 604,
+      "y": 0,
+      "bottom": 88.59375,
+      "center": 364,
+      "button": {
+        "x": 402,
+        "right": 586.40625,
+        "y": 27.375,
+        "bottom": 61.21875
+      },
+      "overflow": false,
+      "pageOverflow": false,
+      "transform": "matrix(1, 0, 0, 1, -240, 0)",
+      "position": "sticky"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "zoom": 2,
+      "state": "idle",
+      "x": -326,
+      "right": 454,
+      "y": 0,
+      "bottom": 255.640625,
+      "center": 64,
+      "button": {
+        "x": 57.984375,
+        "right": 418.8125,
+        "y": 93.953125,
+        "bottom": 161.671875
+      },
+      "overflow": false,
+      "pageOverflow": false,
+      "transform": "matrix(1, 0, 0, 1, -390, 0)",
+      "position": "sticky"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "zoom": 1,
+      "state": "idle",
+      "x": 480,
+      "right": 960,
+      "y": 0,
+      "bottom": 88.59375,
+      "center": 720,
+      "button": {
+        "x": 758,
+        "right": 942.40625,
+        "y": 27.375,
+        "bottom": 61.21875
+      },
+      "overflow": false,
+      "pageOverflow": false,
+      "transform": "matrix(1, 0, 0, 1, -240, 0)",
+      "position": "sticky"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "zoom": 2,
+      "state": "idle",
+      "x": 0,
+      "right": 960,
+      "y": 0,
+      "bottom": 177.25,
+      "center": 480,
+      "button": {
+        "x": 563.984375,
+        "right": 924.8125,
+        "y": 54.765625,
+        "bottom": 122.484375
+      },
+      "overflow": false,
+      "pageOverflow": false,
+      "transform": "matrix(1, 0, 0, 1, -480, 0)",
+      "position": "sticky"
+    }
+  ]
+}

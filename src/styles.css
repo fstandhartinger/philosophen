@@ -723,11 +723,13 @@ button {
 /* Update banner */
 .update-banner {
   position: fixed;
-  left: 50%;
-  bottom: calc(1rem + env(safe-area-inset-bottom));
-  transform: translateX(-50%);
+  inset-inline: max(1rem, env(safe-area-inset-left), env(safe-area-inset-right));
+  margin-inline: auto;
+  top: calc(1rem + env(safe-area-inset-top));
   z-index: 60;
-  width: min(30rem, calc(100vw - 2rem));
+  width: auto;
+  max-width: 30rem;
+  flex-wrap: wrap;
   background: var(--ink);
   color: var(--ivory);
   border-radius: 14px;
@@ -737,11 +739,16 @@ button {
   gap: 0.9rem;
   box-shadow: 0 18px 40px -14px rgba(0, 0, 0, 0.45);
 }
-.update-banner .txt { flex: 1; font-size: 0.85rem; line-height: 1.4; }
+.update-banner .txt { flex: 1 1 14rem; min-width: 0; overflow-wrap: anywhere; font-size: 0.85rem; line-height: 1.4; }
 .update-banner .txt strong { font-weight: 600; display: block; font-size: 0.9rem; }
 .update-banner .busy-hint { color: rgba(245,241,232,.72); font-size: 0.78rem; }
 .update-banner button {
-  flex: 0 0 auto;
+  flex: 0 1 auto;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  white-space: normal;
+  overflow-wrap: anywhere;
   font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
   border-radius: 999px; padding: 0.5rem 0.95rem;
 }

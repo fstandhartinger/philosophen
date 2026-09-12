@@ -1,6 +1,6 @@
 {
-  "baseUrl": "http://localhost:3107",
-  "at": "2026-09-12T15:49:47.048Z",
+  "baseUrl": "http://127.0.0.1:13127",
+  "at": "2026-09-12T19:46:40.037Z",
   "passed": 16,
   "failed": 0,
   "results": [
@@ -12,7 +12,7 @@
     {
       "name": "service worker registered & active (A)",
       "ok": true,
-      "detail": "{\"scope\":\"http://localhost:3107/\",\"script\":\"http://localhost:3107/sw.js\"}"
+      "detail": "{\"scope\":\"http://127.0.0.1:13127/\",\"script\":\"http://127.0.0.1:13127/sw.js\"}"
     },
     {
       "name": "/api/version → update-test-A",
@@ -72,7 +72,7 @@
     {
       "name": "draft retained after PWA upgrade",
       "ok": true,
-      "detail": "value=\"Upgrade-Entwurf-1789228181011\""
+      "detail": "value=\"Upgrade-Entwurf-1789242393476\""
     },
     {
       "name": "old version caches removed",
