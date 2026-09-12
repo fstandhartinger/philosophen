@@ -3,6 +3,7 @@
 // damit die Tests deterministisch ohne Netz laufen. server/server.js startet die App.
 
 import express from 'express';
+import {installSpeech} from './speech.js';
 import helmet from 'helmet';
 import multer from 'multer';
 import fs from 'node:fs';
@@ -343,6 +344,7 @@ export function createApp(options = {}) {
   // Same-Origin-Schutz für alle POSTs
   const guard = sameOriginGuard(options.allowedHosts);
   app.use('/api', guard);
+  installSpeech(app,{...options,version,fetch:fetchImpl,env});
 
   // ---------- Health / Personas / Version ----------
   app.get('/healthz', (req, res) => {

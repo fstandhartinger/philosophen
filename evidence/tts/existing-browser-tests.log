@@ -1,0 +1,40 @@
+BASE_URL=http://localhost:3110
+  PASS  landing shows 8 philosopher cards
+  PASS  all 8 persona names rendered
+  PASS  all portraits served
+  PASS  AI disclaimer absent
+  PASS  no horizontal overflow (desktop 1440)
+  PASS  select → chat input appears
+  PASS  greeting or starter prompts shown
+  PASS  editable draft survives reload
+  PASS  markdown script injection NOT executed
+  PASS  no raw <script> element in rendered markdown
+  PASS  markdown bold rendered (sanitization keeps formatting)
+  PASS  mic button present
+  PASS  /api/transcribe called after fake mic recording
+  PASS  transcript editable in input field
+  PASS  transcript NOT auto-sent
+  PASS  mic denied → informative message
+  PASS  mic unsupported → informative message
+  PASS  back returns to card grid
+  PASS  clear/reset empties draft
+  PASS  409 VERSION_MISMATCH → visible user-facing error
+  PASS  offline indication shown
+  PASS  manifest.webmanifest served
+  PASS  manifest has name/icons/start_url/display
+  PASS  service worker /sw.js served (no-cache)
+  PASS  synthetic beforeinstallprompt dispatched (not proof of real installability)
+  PASS  installation instructions surfaced (synthetic prompt or static hint)
+  PASS  /api/version no-store header
+  PASS  no API key pattern in served HTML
+  PASS  evidence/desktop.png written
+  PASS  no console errors
+  PASS  no page errors
+  PASS  no horizontal overflow (mobile 390)
+  PASS  mobile renders cards
+  PASS  evidence/mobile.png written
+  PASS  mobile chat input reachable
+  PASS  no console errors (mobile)
+  PASS  no page errors (mobile)
+
+37 passed, 0 failed → evidence/browser-results.json

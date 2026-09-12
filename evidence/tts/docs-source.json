@@ -1,0 +1,15 @@
+{
+  "url": "https://elevenlabs.io/docs/api-reference/text-to-speech/convert",
+  "fetchedOnSandy": "2026-09-12",
+  "status": 200,
+  "bytes": 1382822,
+  "sha256": "14712a985ca68764745733b5d0e34a7b3cb7d974723de8001b183886fe5a79ab",
+  "snapshot": "/home/flori/task-logs/philosophen-tts/api-docs.html",
+  "catalog": "voices.json and models.json",
+  "endpoint": "POST /v1/text-to-speech/:voice_id?output_format=mp3_44100_128",
+  "body": {
+    "text": "complete plain text",
+    "model_id": "eleven_multilingual_v2",
+    "language_code": "de"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "baseUrl": "http://localhost:3110",
-  "at": "2026-09-12T15:35:48.326Z",
+  "at": "2026-09-12T15:49:18.644Z",
   "passed": 37,
   "failed": 0,
   "results": [
@@ -42,7 +42,7 @@
     {
       "name": "editable draft survives reload",
       "ok": true,
-      "detail": "got \"Entwurf-1789227335956-Was ist Tugend?\""
+      "detail": "got \"Entwurf-1789228146399-Was ist Tugend?\""
     },
     {
       "name": "markdown script injection NOT executed",

@@ -1,0 +1,9 @@
+PASS iOS automatic invitation, exact answers, 360/390 layout, Nein survives reload
+PASS before expiry absent; after expiry on reload present
+PASS foreground expiration and Escape cooldown; manual bypass and iOS instructions
+PASS Ja iOS fallback and Android fallback
+PASS late saved native event consumed by Ja; cancellation cooldown; appinstalled suppression
+PASS standalone and desktop never automatically invited
+PASS other modal, chat and recording defer expiration; removed UI text absent
+PASS backdrop dismissal persists cooldown
+PASS storage denied does not crash or repeat in same page

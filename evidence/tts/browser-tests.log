@@ -1,0 +1,15 @@
+[
+  {
+    name: 'desktop',
+    passed: true,
+    requests: 5,
+    autoplay: 'real AudioBufferSource started with running context after delay; gesture policy enabled'
+  },
+  {
+    name: 'mobile',
+    passed: true,
+    requests: 5,
+    autoplay: 'real AudioBufferSource started with running context after delay; gesture policy enabled'
+  },
+  { name: 'webkit', skipped: 'browserType.launch: ' }
+]

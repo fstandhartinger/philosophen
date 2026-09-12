@@ -1,0 +1,60 @@
+
+> philosophen@1.0.0 test
+> node --test tests/*.test.js
+
+✔ GET /healthz liefert ok + version mit no-store (25.604857ms)
+✔ GET /api/version liefert Version + X-App-Version Header (3.970234ms)
+✔ GET /api/personas liefert 8 Personas ohne Systemprompt (5.74631ms)
+✔ persona systemPrompts sind substanziell (>=150 Wörter) und deutsch (0.580489ms)
+✔ POST /api/chat ohne Version -> 400 MISSING_VERSION (13.289944ms)
+✔ POST /api/chat mit falscher Version -> 409 VERSION_MISMATCH (5.838778ms)
+✔ POST /api/chat unbekannter Philosoph -> 400 (5.584053ms)
+✔ POST /api/chat malformed body (Array) -> 400 (2.846596ms)
+✔ POST /api/chat lehnt system-Rolle ab (2.735757ms)
+✔ POST /api/chat lehnt erste assistant-Nachricht ab (nicht alternierend) (2.967323ms)
+✔ POST /api/chat lehnt gleiche Rollen hintereinander ab (2.612829ms)
+✔ POST /api/chat >24 Nachrichten -> 400 (2.252267ms)
+✔ POST /api/chat >4000 Zeichen in einer Nachricht -> 400 (2.030901ms)
+✔ POST /api/chat >12000 Zeichen gesamt -> 400 (2.147989ms)
+✔ Chat: erster Anbieter erfolgreich -> reply + model aus Schritt 1 (3.11727ms)
+✔ Chat: Fehler in Schritt 1 -> exakt Schritt 2, dann 3, dann 4 (2.438253ms)
+✔ Chat: Timeout (Abort) eines Schritts führt zum nächsten (103.654705ms)
+✔ Chat: alle Anbieter scheitern -> 502 ALL_PROVIDERS_FAILED ohne Nutzerinhalt (3.337426ms)
+✔ Chat: <think>-Tags werden aus der Antwort entfernt (2.952664ms)
+✔ Chat: Rate-Limit pro IP greift (7.092674ms)
+✔ Chat: globale Nebenläufigkeit führt zum nächsten Anbieterfreiflug nicht zum Blockieren (3.941335ms)
+✔ POST mit fremdem Origin -> 403 (2.706018ms)
+✔ POST mit erlaubtem Host (Origin == Host) -> 200 (2.400264ms)
+✔ Cross-Site Fetch-Header -> 403 (2.06141ms)
+✔ XSS-Nutzlast wird unverändert JSON-kodiert, nie als HTML reflektiert (6.986555ms)
+✔ Helmet-CSP ist aktiv und erlaubt lokale Fonts (3.864585ms)
+✔ Transcribe: erfolgreiche Umwandlung liefert {text} (21.436608ms)
+✔ Transcribe: abgelehnter MIME-Typ -> 415 (3.11918ms)
+✔ Transcribe: fehlende Datei -> 400 (2.677149ms)
+✔ Transcribe: falsches Versionsfeld -> 409 (2.444723ms)
+✔ Transcribe: Groq-Fehler -> 502 und kein Key im Body (2.901334ms)
+✔ Transcribe: Timeout -> 504 (84.267708ms)
+✔ Transcribe: WebM erlaubt, Rate-Limit separat (5.922706ms)
+✔ Transcribe: zu große Datei -> 413 (44.350767ms)
+✔ Unbekannte API-Route -> 404 NOT_FOUND JSON (3.076361ms)
+✔ Kein x-powered-by Header (3.198968ms)
+✔ Reject empty conversations, blank messages and trailing assistant (40.916303ms)
+✔ Reject excess concurrent chat immediately, then release slot (29.675679ms)
+✔ Audio and chat share bounded global provider budget (9.638684ms)
+✔ No more than total deadline is spent on fallback attempts (89.085925ms)
+✔ System prompts never appear in public persona metadata (4.199559ms)
+✔ all male/female voices server controlled, output headers and full text (71.14308ms)
+✔ input, version, unknown persona, content type and origin fail before provider (14.249676ms)
+✔ complete long outputs split without losing characters, no surrogate split (4.113391ms)
+✔ timeout aborts fetch and slot released for retry (25.629837ms)
+✔ provider status, empty/type/signature/oversized errors and retry (23.36164ms)
+✔ independent per-IP request, character and global character budgets (15.335885ms)
+✔ concurrent request rejects before charging; disconnect aborts provider (21.973098ms)
+ℹ tests 48
+ℹ suites 0
+ℹ pass 48
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5426.570259
