@@ -1,0 +1,30 @@
+{
+  "coordinator": "Codex GPT-6 Astra",
+  "host": "Sandy",
+  "workerModel": "chutes/moonshotai/Kimi-K3-TEE",
+  "configuredDefaultOverridden": true,
+  "tasks": [
+    {
+      "name": "backend",
+      "brief": "tasks/backend.txt",
+      "timeoutSeconds": 900
+    },
+    {
+      "name": "frontend",
+      "brief": "tasks/frontend.txt",
+      "timeoutSeconds": 900
+    },
+    {
+      "name": "artwork",
+      "brief": "tasks/artwork.txt",
+      "timeoutSeconds": 900
+    },
+    {
+      "name": "gift-media",
+      "brief": "tasks/gift-media.txt",
+      "timeoutSeconds": 1000
+    }
+  ],
+  "modelEvidence": "model-catalog-and-completions.json",
+  "secretAlias": "OPEN_ROUTER_API_KEY -> OPENROUTER_API_KEY (server only)"
+}

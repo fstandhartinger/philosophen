@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Philosophen — Geburtstags-Erklärvideo</title>
+<style>
+  html,body{margin:0;padding:0;width:1920px;height:1080px;background:#0f1a17;overflow:hidden}
+  #stage{position:relative;width:1920px;height:1080px;background:#0f1a17;font-family:Georgia,'Times New Roman',serif;color:#f5f1e8}
+  .scene{position:absolute;inset:0;opacity:0}
+  .cap{position:absolute;top:64px;left:0;width:1920px;text-align:center;font-size:34px;letter-spacing:.06em;color:#e9e3d2}
+  .step{position:absolute;top:58px;left:96px;font-size:22px;letter-spacing:.35em;color:#c9a24b;font-family:Verdana,sans-serif}
+  svg{display:block}
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+(function(){
+const W=1920,H=1080,IV='#f5f1e8',GOLD='#c9a24b',GOLD2='#e3c983',TERRA='#b6573d',INK='#0f1a17',TEAL='#27423a',MUT='#9aa796';
+const stage=document.getElementById('stage');
+const B=(window.CONFIG&&window.CONFIG.bounds&&window.CONFIG.bounds.length===9)?window.CONFIG.bounds:[0,6.5,13,19,25,32,37,43.5,49.8].map(t=>t*53.812245/49.8);
+const ease=u=>{u=Math.max(0,Math.min(1,u));return u*u*(3-2*u);};
+// deterministic pseudo-random
+let seed=42; const rnd=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};
+
+function div(html){const d=document.createElement('div');d.className='scene';d.innerHTML=html;stage.appendChild(d);return d;}
+function svgIn(inner){return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">${inner}</svg>`;}
+function txt(x,y,s,size,fill,anchor,extra){return `<text x="${x}" y="${y}" font-size="${size}" fill="${fill}" text-anchor="${anchor||'middle'}" ${extra||''} font-family="Georgia,serif">${s}</text>`;}
+
+/* ---------- Scene 1: Birthday ---------- */
+const s1=div(svgIn(`
+  <g id="s1g">
+    <line x1="620" y1="392" x2="1300" y2="392" stroke="${GOLD}" stroke-width="1" />
+    ${txt(960,360,'Eine ganz besondere Widmung',30,GOLD,'middle','font-style="italic"')}
+    ${txt(960,520,'Alles Gute zum Geburtstag,',64,IV)}
+    ${txt(960,640,'Armin!',108,GOLD,'middle','font-weight="bold"')}
+    <rect id="s1ul" x="660" y="676" width="0" height="3" fill="${GOLD}"/>
+    ${txt(960,764,'Gespräche mit acht der größten Denker der Geschichte',30,MUT,'middle','font-style="italic"')}
+    <g id="s1dots"></g>
+  </g>`));
+(function(){const g=s1.querySelector('#s1dots');let h='';
+for(let i=0;i<8;i++){h+=`<circle class="d" cx="${760+i*57}" cy="900" r="6" fill="${GOLD}" opacity="0"/>`;}
+g.innerHTML=h;})();
+
+/* ---------- Scene 2: Scan code ---------- */
+const qrGrid='<image href="../../deliverables/gift-qr.png" x="185" y="420" width="210" height="210"/>';
+const s2=div(svgIn(`
+  <g>
+    ${txt(960,220,'1 · Halte die Kamera auf den Code',34,GOLD)}
+    <g id="s2card" transform="rotate(-5 300 630)">
+      <rect x="150" y="390" width="300" height="380" rx="14" fill="${IV}"/>
+      <rect x="164" y="404" width="272" height="352" rx="8" fill="none" stroke="${GOLD}" stroke-width="1.5"/>
+      ${qrGrid}
+      ${txt(300,706,'Philosophen · Geburtstagskarte',19,'#5a4a35')}
+    </g>
+    <g id="s2phone">
+      <rect x="1330" y="330" width="330" height="560" rx="40" fill="#16241f" stroke="${TEAL}" stroke-width="3"/>
+      <rect x="1352" y="366" width="286" height="488" rx="24" fill="#0b130f"/>
+      <g id="s2vf" stroke="${GOLD}" stroke-width="5" fill="none">
+        <path d="M1400 470 v-30 h30"/><path d="M1560 440 h30 v30"/>
+        <path d="M1400 690 v30 h30"/><path d="M1590 720 v-30 h-30"/>
+      </g>
+      <line id="s2laser" x1="1390" y1="450" x2="1600" y2="450" stroke="${TERRA}" stroke-width="4" opacity="0"/>
+      <circle id="s2ok" cx="1495" cy="580" r="0" fill="none" stroke="${GOLD2}" stroke-width="6"/>
+      <path id="s2tick" d="M1462 580 l22 24 46 -52" stroke="${GOLD2}" stroke-width="10" fill="none" opacity="0" stroke-linecap="round"/>
+    </g>
+    <path d="M560 590 C 800 540, 1050 560, 1290 590" stroke="${GOLD}" stroke-width="2" fill="none" stroke-dasharray="2 10" stroke-linecap="round"/>
+    ${txt(960,1000,'…und die Seite öffnet sich',30,MUT,'middle','font-style="italic"')}
+  </g>`));
+
+/* ---------- Scene 3: Install ---------- */
+let s3cells='';
+for(let r=0;r<4;r++)for(let c4=0;c4<4;c4++){
+  s3cells+=`<rect x="${826+c4*70}" y="${420+r*70}" width="46" height="46" rx="11" fill="#223830" stroke="${TEAL}"/>`;
+}
+const s3=div(svgIn(`
+  <g>
+    ${txt(960,220,'2 · Auf dem iPhone: Teilen → Zum Home-Bildschirm',34,GOLD)}
+    <rect x="770" y="330" width="380" height="620" rx="46" fill="#16241f" stroke="${TEAL}" stroke-width="3"/>
+    <rect x="792" y="366" width="336" height="548" rx="26" fill="#0b130f"/>
+    ${s3cells}
+    <g id="s3icon" transform="translate(960 640)" opacity="0">
+      <circle r="34" fill="${GOLD}"/>
+      <text y="14" font-size="44" fill="${INK}" text-anchor="middle" font-family="Georgia,serif" font-style="italic">Φ</text>
+    </g>
+    <circle id="s3ring" cx="960" cy="640" r="34" fill="none" stroke="${GOLD}" stroke-width="3" opacity="0"/>
+    ${txt(960,1000,'die Philosophen wie eine echte App',30,MUT,'middle','font-style="italic"')}
+  </g>`));
+
+/* ---------- Scene 4: Choose thinker ---------- */
+const portraitIds=['sokrates','aristoteles','epikur','kant','nietzsche','arendt','beauvoir','camus'];
+const thinkers=[['So','Sokrates'],['Ar','Aristoteles'],['Ep','Epikur'],['Ka','Kant'],['Ni','Nietzsche'],['Ae','Arendt'],['Be','Beauvoir'],['Ca','Camus']];
+let s4m='';
+thinkers.forEach((th,i)=>{const cx=480+i*137,cy=560;
+  s4m+=`<g class="med" data-i="${i}"><circle cx="${cx}" cy="${cy}" r="56" fill="#16241f" stroke="${GOLD}" stroke-width="2.5"/>
+  <circle class="halo" cx="${cx}" cy="${cy}" r="64" fill="none" stroke="${TERRA}" stroke-width="4" opacity="0"/>
+  ${`<defs><clipPath id="portrait-${i}"><circle cx="${cx}" cy="${cy}" r="52"/></clipPath></defs><image href="../../public/portraits/${portraitIds[i]}.webp" x="${cx-52}" y="${cy-52}" width="104" height="104" clip-path="url(#portrait-${i})"/>`}${txt(cx,cy+104,th[1],24,MUT)}</g>`;});
+const s4=div(svgIn(`
+  <g>
+    ${txt(960,250,'3 · Wähle deinen Denker',34,GOLD)}
+    ${txt(960,330,'acht Persönlichkeiten · acht Weltsichten',28,MUT,'middle','font-style="italic"')}
+    ${s4m}
+    <g id="s4hi" opacity="0"><circle r="70" fill="none" stroke="${TERRA}" stroke-width="5" stroke-dasharray="12 8"/></g>
+  </g>`));
+
+/* ---------- Scene 5: Ask question ---------- */
+let bars='';
+const s5=div(svgIn(`
+  <g>
+    ${txt(960,210,'4 · Stelle deine Frage',34,GOLD)}
+    <rect x="520" y="280" width="880" height="560" rx="30" fill="#16241f" stroke="${TEAL}" stroke-width="2.5"/>
+    <g><circle cx="600" cy="352" r="34" fill="${TEAL}" stroke="${GOLD}" stroke-width="2"/>
+      ${txt(600,365,'Ka',34,IV)}
+      ${txt(660,346,'Immanuel Kant',30,IV,'start')}
+      ${txt(660,378,'antwortet dir persönlich',22,MUT,'start','font-style="italic"')}</g>
+    <g id="s5bub">
+      <rect x="600" y="440" width="640" height="110" rx="22" fill="${IV}"/>
+      <text id="s5typed" x="632" y="508" font-size="34" fill="#1c2320" text-anchor="start" font-family="Georgia,serif"></text>
+      <rect id="s5caret" x="632" y="472" width="3" height="44" fill="${TERRA}"/>
+    </g>
+    <g id="s5mic">
+      <circle cx="1300" cy="700" r="52" fill="${TERRA}"/>
+      <circle id="s5pulse" cx="1300" cy="700" r="52" fill="none" stroke="${TERRA}" stroke-width="4" opacity="0.8"/>
+      <rect x="1288" y="668" width="24" height="44" rx="12" fill="${IV}"/>
+      <path d="M1278 708 a22 22 0 0 0 44 0" stroke="${IV}" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <line x1="1300" y1="734" x2="1300" y2="748" stroke="${IV}" stroke-width="6" stroke-linecap="round"/>
+    </g>
+    <g id="s5wave">${Array.from({length:9},(_,i)=>`<rect class="wv" x="${1060+i*22}" y="676" width="9" height="28" rx="4" fill="${GOLD}"/>`).join('')}</g>
+    ${txt(700,712,'tippen …',26,MUT,'middle','font-style="italic"')}
+    ${txt(960,1000,'eine stilisierte Illustration der App-Oberfläche',22,'#5b6a60','middle','font-style="italic"')}
+  </g>`));
+
+/* ---------- Scene 6: Edit transcript & send ---------- */
+const s6=div(svgIn(`
+  <g>
+    ${txt(960,210,'5 · Transkript prüfen, dann senden',34,GOLD)}
+    <rect x="470" y="310" width="980" height="300" rx="26" fill="#16241f" stroke="${TEAL}" stroke-width="2.5"/>
+    ${txt(520,380,'Dein Transkript',26,GOLD,'start')}
+    <text id="s6t" x="520" y="452" font-size="36" fill="${IV}" text-anchor="start" font-family="Georgia,serif">Herr Kant, was heißt,</text>
+    <text id="s6t2" x="520" y="512" font-size="36" fill="${IV}" text-anchor="start" font-family="Georgia,serif">weise zu handeln?</text>
+    <rect id="s6edit" x="632" y="528" width="0" height="6" rx="3" fill="${GOLD}"/>
+    <g id="s6pen"><path d="M1370 560 l40 -40 14 14 -40 40 -20 6 z" fill="${GOLD2}"/></g>
+    <g id="s6send">
+      <circle cx="960" cy="730" r="58" fill="${TERRA}"/>
+      <path id="s6plane" d="M932 742 l30 -36 8 24 22 -6 z" fill="${IV}" transform="translate(0 0)"/>
+    </g>
+    ${txt(960,830,'nichts wird automatisch abgeschickt',26,MUT,'middle','font-style="italic"')}
+  </g>`));
+
+/* ---------- Scene 7: Eight perspectives ---------- */
+let s7n='';
+for(let i=0;i<8;i++){const a=i*Math.PI/4-Math.PI/2,x=960+330*Math.cos(a),y=590+290*Math.sin(a);
+  s7n+=`<line class="spoke" x1="960" y1="590" x2="${x}" y2="${y}" stroke="${TEAL}" stroke-width="2" opacity="0"/>
+  <g class="node" opacity="0.25"><circle cx="${x}" cy="${y}" r="46" fill="#16241f" stroke="${GOLD}" stroke-width="2"/>
+  <circle class="inner" cx="${x}" cy="${y}" r="30" fill="${GOLD}" opacity="0"/></g>`;}
+const s7=div(svgIn(`
+  <g>
+    ${txt(960,180,'6 · Acht Blickwinkel auf deine Frage',34,GOLD)}
+    ${s7n}
+    <circle cx="960" cy="590" r="86" fill="${TEAL}" stroke="${GOLD}" stroke-width="3"/>
+    ${txt(960,612,'Deine Frage',38,IV)}
+  </g>`));
+
+/* ---------- Scene 8: Disclaimer + farewell ---------- */
+const s8=div(svgIn(`
+  <g>
+    <rect x="560" y="300" width="800" height="120" rx="60" fill="none" stroke="${GOLD}" stroke-width="2.5"/>
+    ${txt(960,375,'Künstlerische KI-Simulation — Hommage, kein Original',31,GOLD2,'middle','font-style="italic"')}
+    ${txt(960,600,'Viel Freude beim Denken,',56,IV)}
+    ${txt(960,700,'Armin!',96,GOLD,'middle','font-weight="bold"')}
+    <text id="s8host" x="960" y="820" font-size="26" fill="${MUT}" text-anchor="middle" font-family="Georgia,serif" opacity="0">philosophen.app.mintapis.com</text>
+    <g id="s8stars">${Array.from({length:12},(_,i)=>{const x=200+i*135+rnd()*60,y=180+rnd()*700;return `<circle class="st" cx="${x}" cy="${y}" r="${2+rnd()*2}" fill="${GOLD}" opacity="0"/>`;}).join('')}</g>
+  </g>`));
+
+const scenes=[s1,s2,s3,s4,s5,s6,s7,s8];
+
+/* ---------- timeline ---------- */
+const Q='Was ist ein gutes Leben?';
+window.seekTo=function(t){
+  const total=(window.CONFIG&&window.CONFIG.total)||49.8;
+  // scene opacities with 0.45s crossfades
+  for(let i=0;i<8;i++){
+    const a=B[i],b=B[i+1];
+    let o=Math.min(ease((t-a)/0.45),1-ease((t-(b-0.45))/0.45));
+    scenes[i].style.opacity=Math.max(0,Math.min(1,o));
+  }
+  // S1: underline + dots
+  s1.querySelector('#s1ul').setAttribute('width',600*ease((t-0.6)/1.2));
+  s1.querySelectorAll('#s1dots .d').forEach((d,i)=>{const u=ease((t-(1.2+i*0.18))/0.5);
+    d.setAttribute('opacity',u);d.setAttribute('cy',900-40*ease(u));d.setAttribute('r',6+3*Math.sin(t*2+i));});
+  // S2: laser sweep + ok
+  {const u=t-B[1],d=B[2]-B[1];const y=450+270*((u%d)/d<.5?((u%d)/d)*2:1-((u%d)/d-.5)*2);
+   const l=s2.querySelector('#s2laser');l.setAttribute('y1',y);l.setAttribute('y2',y);
+   l.setAttribute('opacity',u<d-0.9&&u>0.3?0.85:0);
+   const okU=ease((u-(d-1.2))/0.5);
+   s2.querySelector('#s2ok').setAttribute('r',80*okU);
+   s2.querySelector('#s2ok').setAttribute('opacity',okU*(1-Math.max(0,(okU-0.7)/0.3)*0.3));
+   s2.querySelector('#s2tick').setAttribute('opacity',ease((u-(d-0.8))/0.4));
+   s2.querySelector('#s2card').setAttribute('transform',`rotate(${-5+1.5*Math.sin(t*1.2)} 300 630)`);}
+  // S3: icon drop + ring
+  {const u=t-B[2];
+   const g=s3.querySelector('#s3icon');
+   const drop=ease(u/0.8);const over=ease((u-0.8)/0.35);const back=1-0.12*Math.sin(Math.min(1,(u-0.8)/0.4)*Math.PI);
+   g.setAttribute('opacity',drop);
+   g.setAttribute('transform',`translate(960 ${300+340*drop}) scale(${back*(0.6+0.4*over+0.4*Math.min(1,u/0.8))})`);
+   const r=s3.querySelector('#s3ring');const rp=ease((u-1.1)/0.9);
+   r.setAttribute('r',34+70*rp);r.setAttribute('opacity',rp>0?1-rp:0);}
+  // S4: sweep + lock
+  {const u=t-B[3],d=B[4]-B[3];
+   const idx=u<d-1.6?Math.floor(u/0.45)%8:3;
+   s4.querySelectorAll('circle.halo').forEach((h,i)=>h.setAttribute('opacity',i===idx?0.9:0));
+   const hi=s4.querySelector('#s4hi');const lockU=ease((u-(d-1.6))/0.5);
+   hi.setAttribute('opacity',lockU);
+   const cx=480+3*137;hi.setAttribute('transform',`translate(${cx} 560) rotate(${(1-lockU)*90})`);}
+  // S5: typewriter + wave + mic pulse
+  {const u=t-B[4],d=B[5]-B[4];
+   const shown=Math.min(Q.length,Math.floor(Math.max(0,u-0.4)*7));
+   s5.querySelector('#s5typed').textContent=Q.slice(0,shown);
+   s5.querySelector('#s5caret').setAttribute('x',632+ (shown? s5.querySelector('#s5typed').getComputedTextLength? 0:0:0) );
+   const ty=s5.querySelector('#s5typed');const cx2= ty.getComputedTextLength? 632+ty.getComputedTextLength()+6:632;
+   s5.querySelector('#s5caret').setAttribute('x',cx2);
+   s5.querySelector('#s5caret').setAttribute('opacity',Math.sin(t*8)>0?1:0.2);
+   s5.querySelectorAll('.wv').forEach((w,i)=>{const hgt=10+34*Math.abs(Math.sin(t*3.1+i*0.7));
+     w.setAttribute('height',hgt);w.setAttribute('y',690-hgt/2-14);});
+   const p=s5.querySelector('#s5pulse');const pu=(u*1.2)%1;p.setAttribute('r',52+44*pu);p.setAttribute('opacity',0.75*(1-pu));}
+  // S6: edit underline + send
+  {const u=t-B[5],d=B[6]-B[5];
+   s6.querySelector('#s6edit').setAttribute('width',150*ease(u/1.4));
+   const pen=s6.querySelector('#s6pen');pen.setAttribute('opacity',u<1.9?1:0);
+   const fly=ease((u-2.2)/1.1);
+   const pl=s6.querySelector('#s6plane');
+   pl.setAttribute('transform',`translate(${420*fly} ${-360*fly}) rotate(${-25*fly})`);
+   pl.setAttribute('opacity',fly<1?1:0);}
+  // S7: light up nodes
+  {const u=t-B[6],d=B[7]-B[6];
+   s7.querySelectorAll('.node').forEach((n,i)=>{const lit=ease((u-(0.6+i*0.45))/0.4);
+     n.setAttribute('opacity',0.25+0.75*lit);
+     n.querySelector('.inner').setAttribute('opacity',lit);});
+   s7.querySelectorAll('.spoke').forEach((sp,i)=>{sp.setAttribute('opacity',ease((u-(0.45+i*0.45))/0.35)*0.9);});}
+  // S8: farewell + twinkle
+  {const u=t-B[7];
+   s8.querySelector('#s8host').setAttribute('opacity',ease((u-1.6)/0.8));
+   s8.querySelectorAll('.st').forEach((st,i)=>{st.setAttribute('opacity',0.25+0.75*Math.abs(Math.sin(t*1.5+i*1.3)));});}
+};
+document.fonts?document.fonts.ready.then(()=>{window.__ready=true;}):window.__ready=true;
+window.__ready=true;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "status": 200,
+  "model": "whisper-large-v3",
+  "text": " Hallo Sokrates! Was bedeutet es, ein gutes Leben zu führen? Ich möchte an meinem Geburtstag darüber nachdenken.",
+  "source": "George ElevenLabs generated German test recording"
+}

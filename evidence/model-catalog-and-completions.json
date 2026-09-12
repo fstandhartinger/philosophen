@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-09-12T14:33:34.446273+00:00",
+  "catalogMatches": [
+    [
+      "chutes",
+      "moonshotai/Kimi-K3-TEE"
+    ],
+    [
+      "chutes",
+      "Qwen/Qwen3.8-27B-TEE"
+    ],
+    [
+      "openrouter",
+      "openrouter/free"
+    ],
+    [
+      "openrouter",
+      "openai/gpt-5.6-luna"
+    ]
+  ],
+  "completions": [
+    {
+      "provider": "chutes",
+      "requested": "moonshotai/Kimi-K3-TEE",
+      "returned": "moonshotai/Kimi-K3-TEE",
+      "ok": true,
+      "answer": "Eine gute Frage ist klar formuliert, spezifisch genug für eine präzise Antwort und regt zum Nachdenken an.",
+      "seconds": 2.46
+    },
+    {
+      "provider": "chutes",
+      "requested": "Qwen/Qwen3.8-27B-TEE",
+      "returned": "Qwen/Qwen3.8-27B-TEE",
+      "ok": true,
+      "answer": "Eine gute Frage ist präzise formuliert und regt zu nachdenklichen oder kreativen Antworten an.",
+      "seconds": 1.73
+    },
+    {
+      "provider": "openrouter",
+      "requested": "openrouter/free",
+      "returned": "inclusionai/ling-3.0-flash-fin:free",
+      "ok": true,
+      "answer": "Eine gute Frage ist klar formuliert und regt zum Nachdenken an.",
+      "seconds": 2.29
+    },
+    {
+      "provider": "openrouter",
+      "requested": "openai/gpt-5.6-luna",
+      "returned": "openai/gpt-5.6-luna",
+      "ok": true,
+      "answer": "Eine gute Frage ist klar, präzise und regt zum Nachdenken an.",
+      "seconds": 2.58
+    }
+  ]
+}

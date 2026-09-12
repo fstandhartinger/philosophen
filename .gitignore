@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env*
+!.env.example
+*.log
+tasks/*.jsonl
+deliverables/frames/
+scripts/.venv*/
+version.json
+scripts/.venv-media/

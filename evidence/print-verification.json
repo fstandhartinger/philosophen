@@ -1,0 +1,70 @@
+{
+  "url": "https://philosophen.app.mintapis.com",
+  "headline": "Alles Gute zum Geburtstag, Armin!",
+  "qr_modules": 45,
+  "gift-card-1-klassische-kolonnade": {
+    "pdf_pts": [
+      419.53,
+      297.64
+    ],
+    "decoded": "https://philosophen.app.mintapis.com",
+    "ok": true,
+    "size": [
+      1748,
+      1240
+    ],
+    "dpi": 300,
+    "center_px": [
+      873.5,
+      619.5
+    ],
+    "center_off_px": 0.71,
+    "square_side_ratio": 1.0,
+    "quiet_zone_mean": 255.0,
+    "quiet_zone_min": 255
+  },
+  "gift-card-2-modernistische-geometrie": {
+    "pdf_pts": [
+      419.53,
+      297.64
+    ],
+    "decoded": "https://philosophen.app.mintapis.com",
+    "ok": true,
+    "size": [
+      1748,
+      1240
+    ],
+    "dpi": 300,
+    "center_px": [
+      873.5,
+      619.5
+    ],
+    "center_off_px": 0.71,
+    "square_side_ratio": 1.0,
+    "quiet_zone_mean": 255.0,
+    "quiet_zone_min": 255
+  },
+  "gift-card-3-sternennacht-wald": {
+    "pdf_pts": [
+      419.53,
+      297.64
+    ],
+    "decoded": "https://philosophen.app.mintapis.com",
+    "ok": true,
+    "size": [
+      1748,
+      1240
+    ],
+    "dpi": 300,
+    "center_px": [
+      873.5,
+      619.5
+    ],
+    "center_off_px": 0.71,
+    "square_side_ratio": 1.0,
+    "quiet_zone_mean": 255.0,
+    "quiet_zone_min": 255
+  },
+  "combined_pages": 3,
+  "all_ok": true
+}

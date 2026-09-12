@@ -1,0 +1,203 @@
+{
+  "baseUrl": "http://localhost:3108",
+  "at": "2026-09-12T15:00:31.537Z",
+  "passed": 31,
+  "failed": 6,
+  "results": [
+    {
+      "name": "landing shows 8 philosopher cards",
+      "ok": true,
+      "detail": "found 8"
+    },
+    {
+      "name": "all 8 persona names rendered",
+      "ok": true,
+      "detail": "missing: "
+    },
+    {
+      "name": "all portraits served",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "AI disclaimer rendered",
+      "ok": true,
+      "detail": "Imaginative KI-Simulationen, keine historischen Originalstimmen oder verlässlichen Zitate."
+    },
+    {
+      "name": "no horizontal overflow (desktop 1440)",
+      "ok": true,
+      "detail": "overflow=0px"
+    },
+    {
+      "name": "select → chat input appears",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "greeting or starter prompts shown",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "editable draft survives reload",
+      "ok": true,
+      "detail": "got \"Entwurf-1789225205336-Was ist Tugend?\""
+    },
+    {
+      "name": "markdown script injection NOT executed",
+      "ok": true,
+      "detail": "xss marker=0"
+    },
+    {
+      "name": "no raw <script> element in rendered markdown",
+      "ok": true,
+      "detail": "found 0"
+    },
+    {
+      "name": "markdown bold rendered (sanitization keeps formatting)",
+      "ok": false,
+      "detail": "strong count 0"
+    },
+    {
+      "name": "mic button present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "/api/transcribe called after fake mic recording",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "transcript editable in input field",
+      "ok": false,
+      "detail": "input=\"\""
+    },
+    {
+      "name": "transcript NOT auto-sent",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "mic denied → informative message",
+      "ok": false,
+      "detail": "no message found"
+    },
+    {
+      "name": "mic unsupported → informative message",
+      "ok": false,
+      "detail": "no message found"
+    },
+    {
+      "name": "back returns to card grid",
+      "ok": true,
+      "detail": "cards=8"
+    },
+    {
+      "name": "clear/reset empties draft",
+      "ok": true,
+      "detail": "value=\"\""
+    },
+    {
+      "name": "409 VERSION_MISMATCH → visible user-facing error",
+      "ok": true,
+      "detail": "Eine neue Version ist verfügbar"
+    },
+    {
+      "name": "offline indication shown",
+      "ok": true,
+      "detail": "OFFLINE"
+    },
+    {
+      "name": "manifest.webmanifest served",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "name": "manifest has name/icons/start_url/display",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "service worker /sw.js served (no-cache)",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "name": "synthetic beforeinstallprompt dispatched (not proof of real installability)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "installation instructions surfaced (synthetic prompt or static hint)",
+      "ok": true,
+      "detail": "App installieren ↗"
+    },
+    {
+      "name": "real Chrome installability probe (informational)",
+      "ok": true,
+      "detail": "probe-ok"
+    },
+    {
+      "name": "service worker registration state",
+      "ok": true,
+      "detail": "{\"supported\":true,\"registered\":true,\"scope\":\"http://localhost:3108/\",\"active\":true}"
+    },
+    {
+      "name": "/api/version no-store header",
+      "ok": true,
+      "detail": "{\"status\":200,\"cache\":\"no-store\"}"
+    },
+    {
+      "name": "no API key pattern in served HTML",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence/desktop.png written",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no console errors",
+      "ok": false,
+      "detail": "Failed to load resource: the server responded with a status of 409 (Conflict)"
+    },
+    {
+      "name": "no page errors",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no horizontal overflow (mobile 390)",
+      "ok": true,
+      "detail": "overflow=0px"
+    },
+    {
+      "name": "mobile renders cards",
+      "ok": true,
+      "detail": "cards=8"
+    },
+    {
+      "name": "evidence/mobile.png written",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile chat input reachable",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no console errors (mobile)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no page errors (mobile)",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

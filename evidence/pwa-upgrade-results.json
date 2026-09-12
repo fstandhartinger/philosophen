@@ -1,0 +1,103 @@
+{
+  "baseUrl": "http://localhost:3107",
+  "at": "2026-09-12T15:01:53.284Z",
+  "passed": 16,
+  "failed": 0,
+  "results": [
+    {
+      "name": "server A /healthz reports update-test-A",
+      "ok": true,
+      "detail": "{\"ok\":true,\"version\":\"update-test-A\"}"
+    },
+    {
+      "name": "service worker registered & active (A)",
+      "ok": true,
+      "detail": "{\"scope\":\"http://localhost:3107/\",\"script\":\"http://localhost:3107/sw.js\"}"
+    },
+    {
+      "name": "/api/version → update-test-A",
+      "ok": true,
+      "detail": "{\"version\":\"update-test-A\"}"
+    },
+    {
+      "name": "chat input available (A)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "server B /healthz reports update-test-B",
+      "ok": true,
+      "detail": "{\"ok\":true,\"version\":\"update-test-B\"}"
+    },
+    {
+      "name": "SW found update and reached waiting state",
+      "ok": true,
+      "detail": "{\"ok\":true,\"state\":\"waiting\"}"
+    },
+    {
+      "name": "update prompt visible (safe update offered)",
+      "ok": true,
+      "detail": "Eine neue Version ist verfügbar\nNach dem Gespräch oder der Aufnahme kannst du sicher aktualisieren.\nJETZT AKTUALISIEREN"
+    },
+    {
+      "name": "update accept control present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "update disabled while conversation is in flight",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "update enabled after explicit cancellation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "/api/version → update-test-B after update",
+      "ok": true,
+      "detail": "{\"version\":\"update-test-B\"}"
+    },
+    {
+      "name": "client version badge (informational)",
+      "ok": true,
+      "detail": "no badge element"
+    },
+    {
+      "name": "actual client runtime upgraded to build B",
+      "ok": true,
+      "detail": "\"update-test-B\""
+    },
+    {
+      "name": "draft retained after PWA upgrade",
+      "ok": true,
+      "detail": "value=\"Upgrade-Entwurf-1789225307315\""
+    },
+    {
+      "name": "old version caches removed",
+      "ok": true,
+      "detail": "before=[static-update-test-A] after=[static-update-test-B]"
+    },
+    {
+      "name": "new version cache present (informational)",
+      "ok": true,
+      "detail": "static-update-test-B"
+    },
+    {
+      "name": "API responses never stored in Cache API",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "API served with no-store/no-cache header",
+      "ok": true,
+      "detail": "no-store"
+    },
+    {
+      "name": "offline shell loads from new SW (informational)",
+      "ok": true,
+      "detail": "status 200"
+    }
+  ]
+}
