@@ -272,6 +272,7 @@ export function createApp(options = {}) {
   const version = options.version || readServerVersion();
   const fetchImpl = options.fetch || globalThis.fetch;
   const env = options.env || process.env;
+  const umamiApiKey = options.umamiApiKey ?? env.UMAMI_API_KEY ?? '';
   const apiKeys = {
     CHUTES_API_KEY: options.chutesApiKey ?? env.CHUTES_API_KEY,
     OPENROUTER_API_KEY: options.openrouterApiKey ?? (env.OPENROUTER_API_KEY || env.OPEN_ROUTER_API_KEY),
@@ -309,11 +310,11 @@ export function createApp(options = {}) {
         useDefaults: true,
         directives: {
           "default-src": ["'self'"],
-          "script-src": ["'self'"],
+          "script-src": ["'self'", 'https://bh-analytics.app.mintapis.com'],
           "style-src": ["'self'"], // keine Inline-Styles erzwingen: Vite liefert eigene CSS-Dateien
           "img-src": ["'self'", 'data:'],
           "font-src": ["'self'", 'data:'], // lokale Fonts
-          "connect-src": ["'self'"],
+          "connect-src": ["'self'", 'https://bh-analytics.app.mintapis.com'],
           "media-src": ["'self'", 'blob:'], // Mikrofon-Aufnahme per Blob
           "manifest-src": ["'self'"],
           "worker-src": ["'self'"],
@@ -353,6 +354,39 @@ export function createApp(options = {}) {
 
   app.get('/api/version', (req, res) => {
     res.json({version});
+  });
+
+  const visitorCountCache = {value: null, expiresAt: 0};
+  let visitorCountRequest = null;
+  app.get('/api/analytics/visitors', async (req, res) => {
+    if (!umamiApiKey) return res.json({visitors: null});
+    const now = Date.now();
+    if (visitorCountCache.expiresAt > now) return res.json({visitors: visitorCountCache.value});
+    if (!visitorCountRequest) {
+      visitorCountRequest = (async () => {
+        try {
+          const url = new URL('https://bh-analytics.app.mintapis.com/api/websites/da9843d8-418c-4eee-ab54-1752052e2eac/stats');
+          url.searchParams.set('startAt', '0');
+          url.searchParams.set('endAt', String(now));
+          const response = await fetchImpl(url, {
+            headers: {authorization: `Bearer ${umamiApiKey}`},
+            signal: AbortSignal.timeout(2500),
+          });
+          if (!response.ok) throw new Error('umami_unavailable');
+          const data = await response.json();
+          if (!Number.isSafeInteger(data.visitors) || data.visitors < 0) throw new Error('invalid_umami_response');
+          visitorCountCache.value = data.visitors;
+          visitorCountCache.expiresAt = now + 5 * 60_000;
+        } catch {
+          visitorCountCache.value = null;
+          visitorCountCache.expiresAt = now + 60_000;
+        } finally {
+          visitorCountRequest = null;
+        }
+      })();
+    }
+    await visitorCountRequest;
+    return res.json({visitors: visitorCountCache.value});
   });
 
   app.get('/api/personas', (req, res) => {

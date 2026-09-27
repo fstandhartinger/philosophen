@@ -86,6 +86,21 @@ test('GET /api/version liefert Version + X-App-Version Header', async () => {
   assert.match(res.headers['cache-control'], /no-store/);
 });
 
+test('GET /api/analytics/visitors returns only the cached aggregate count', async () => {
+  const fetchImpl = makeFetch((url, opts) => {
+    assert.equal(new URL(url).hostname, 'bh-analytics.app.mintapis.com');
+    assert.match(new URL(url).pathname, /\/api\/websites\/da9843d8-418c-4eee-ab54-1752052e2eac\/stats$/);
+    assert.equal(opts.headers.authorization, 'Bearer private-test-key');
+    return {status: 200, json: {visitors: 12, pageviews: 34}};
+  });
+  const res = await request(createApp({version: VERSION, fetch: fetchImpl, umamiApiKey: 'private-test-key'}))
+    .get('/api/analytics/visitors');
+  assert.equal(res.status, 200);
+  assert.deepEqual(res.body, {visitors: 12});
+  assert.match(res.headers['cache-control'], /no-store/);
+  assert.equal(fetchImpl.calls.length, 1);
+});
+
 test('GET /api/personas liefert 8 Personas ohne Systemprompt', async () => {
   const res = await request(makeApp()).get('/api/personas');
   assert.equal(res.status, 200);
@@ -348,6 +363,8 @@ test('Helmet-CSP ist aktiv und erlaubt lokale Fonts', async () => {
   assert.match(csp, /default-src 'self'/);
   assert.match(csp, /font-src 'self'/);
   assert.match(csp, /script-src 'self'/);
+  assert.match(csp, /script-src[^;]*https:\/\/bh-analytics\.app\.mintapis\.com/);
+  assert.match(csp, /connect-src[^;]*https:\/\/bh-analytics\.app\.mintapis\.com/);
 });
 
 // ---------- Transkription ----------
