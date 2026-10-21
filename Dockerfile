@@ -5,6 +5,9 @@ RUN npm ci --no-audit --no-fund
 COPY . .
 RUN npm run build && npm prune --omit=dev
 FROM node:22-alpine
+# eMudhra CA distrust (Oct 2026): current CA bundle, and make Node trust it instead of its bundled root list
+RUN apk add --no-cache --upgrade ca-certificates-bundle
+ENV NODE_OPTIONS="--use-openssl-ca"
 ENV NODE_ENV=production PORT=3000
 WORKDIR /app
 COPY --from=build --chown=node:node /app/node_modules ./node_modules
